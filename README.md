@@ -1,1 +1,1 @@
-![note application!](USER-INTERFACE/public/images/ERD.jpeg "post")
+![note application!](user-interface/public/images/ERD.jpeg "post")
