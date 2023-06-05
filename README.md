@@ -1,3 +1,3 @@
 ![note application!][def]
 
-[def]: /public/images/userinterfacephoto1.jpeg "post"
+[def]: /public/images/ERD.jpeg "post"
