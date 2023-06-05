@@ -1,3 +1,1 @@
-![note application!][def]
-
-[def]: /public/images/ERD.jpeg 
+![note application!](/public/images/ERD.jpeg "post")
