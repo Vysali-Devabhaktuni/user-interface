@@ -1,3 +1,1 @@
-![Note application!][def]
-
-[def]: ./public/images/ERD.png
+![Note application!](./public/images/ERD.png)
