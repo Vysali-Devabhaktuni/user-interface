@@ -32,7 +32,10 @@ async function register(username, password) {
 async function login(username, password) {
   const user = await getUser(username);
   if(!user) throw Error('User not found');
-  if(user.password != password) throw Error('Wrong Password')
+
+  const isMatch = await bcrypt.compare(password, user.password);
+ 
+  if(!isMatch) throw Error('Wrong Password');
   return user;
 }
 
