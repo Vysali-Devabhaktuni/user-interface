@@ -1,16 +1,76 @@
-import {'./App.css'};
-import Login from {'./components./login.js'};
-import Register from {'./components/register.js'};
-import Navigation from {'./components/Navigation.js'};
-
-function App( {
-  return (
-    <div className="App">
-      <Loginform>
-      <Registerform />      
-    </div>
-  );
+.App {
+  text-align: center;
 }
-)
 
-export default App;
+.App-logo {
+  height: 35vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 25s linear;
+  }
+}
+
+.App-header {
+  background-color: #a8d12d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(228, 232, 235);
+}
+
+.App-link {
+  color: #d9e5e9;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+input[type=text],input[type=password],input[type=email]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background:#eecbcb;
+  font-size:medium;
+  margin-bottom: 2rem;
+  display: flow-root;
+}
+
+input[type=submit]{
+    
+  background-color: #dea11c;
+  width: 100%;
+  padding: 16px 20px;
+  font-size: medium;
+  margin: 8px 0;
+  display:flow-root;
+  margin-top: 3rem;
+
+}
+
+.photo {
+  max-width: 1100px;
+  margin: 50px;
+  
+}
+.allforms{
+  color:green;
+  background-color:azure;
+  width: 25%;
+  padding: 16px 20px;
+  font-size:large;
+  margin: 8px 0;
+  margin-left: 180px;
+}
