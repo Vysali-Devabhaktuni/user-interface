@@ -1,5 +1,52 @@
+import { fetchData} from "../../main.js";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+
 const Register = () => {
-    return(
+  const navigate = useNavigate();
+
+
+
+  const [user,setuser] = useState({
+  
+      fname:'',
+      lname:'',
+      uname:'',
+      password:''
+  })
+  
+  const {fname,lastname,uname,password} = user;
+  
+  const onChange =(e) => setuser({...user,[e.target.name]: e.target.value})
+  
+  const onSubmit =(e) => {
+  
+      e.preventDefault();
+      
+  
+      fetchData("/user/register",
+          
+      {
+        uname,
+        password
+      },
+       "POST")
+  
+     .then((data) => {
+      if(!data.message){
+  
+        navigate("/profile")
+      }
+  
+     })
+  .catch((error)=>{
+  
+    console.log(error)
+  })
+  }
+  
+  return(
         <div>   
         <label for="fname" class="Register"> First name:</label>   
       <input type="text" id="fname" name="fname" placeholder="Enter your First Name"></input>
