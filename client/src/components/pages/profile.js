@@ -7,11 +7,11 @@ const Profile = () => {
   const [post, setPost] = useState({
     postcontent: "",
   });
-  const [username, setUsername] = useState("");
+  const [uname, setUsername] = useState("");
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
-    const loggedInUsername = user.username;
+    const loggedInUsername = user.uname;
     setUsername(loggedInUsername);
   }, []);
 
@@ -51,7 +51,7 @@ const Profile = () => {
             <div>
                 
       
-      <h2>Welcome, {username}</h2>
+      <h2>Welcome, {uname}</h2>
 
       <form>
         <div>
