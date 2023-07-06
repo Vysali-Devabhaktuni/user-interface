@@ -6,11 +6,11 @@ import { fetchData} from "../../main.js";
 const Login = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({
-    username: '',
+    uname: '',
     password: '',
   });
 
-  const { username, password } = user;
+  const { uname, password } = user;
 
   const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value })
 
@@ -18,7 +18,7 @@ const Login = () => {
     e.preventDefault();
     fetchData("/user/login",
       {
-        username,
+        uname,
         password
       },
       "POST")
