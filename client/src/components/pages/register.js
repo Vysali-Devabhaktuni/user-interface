@@ -16,7 +16,7 @@ const Register = () => {
       password:''
   })
   
-  const {fname,lastname,uname,password} = user;
+  const {fname,lnamename,uname,password} = user;
   
   const onChange =(e) => setuser({...user,[e.target.name]: e.target.value})
   
